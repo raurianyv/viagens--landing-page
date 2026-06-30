@@ -1,15 +1,338 @@
-html::before {
-  content: 'CodePen ♥ The Web';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  font-family: monospace;
-  opacity: 0.6;
-  background: rebeccapurple;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0b2545;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd166;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    color:white;
+}
+
+.overlay h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.botao{
+
+    background:#ffd166;
+    color:#0b2545;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.botao:hover{
+
+    background:white;
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================
+   SEÇÕES
+========================== */
+
+section{
+
+    padding:90px 10%;
+
+    background:white;
+
+}
+
+section:nth-child(even){
+
+    background:#f7f7f7;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    color:#0b2545;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+}
+
+.conteudo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.reverso{
+
+    flex-direction:row-reverse;
+
+}
+
+.conteudo img{
+
+    width:50%;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.conteudo p{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:300px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.card h3{
+
+    color:#0b2545;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:17px;
+
+}
+
+/* ==========================
+   BOTÃO VOLTAR
+========================== */
+
+.voltar{
+
+    display:block;
+
+    margin-top:40px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#0b2545;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.voltar:hover{
+
+    color:#d4a017;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#0b2545;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .conteudo{
+
+        flex-direction:column;
+
+    }
+
+    .reverso{
+
+        flex-direction:column;
+
+    }
+
+    .conteudo img{
+
+        width:100%;
+
+    }
+
+    .overlay h1{
+
+        font-size:42px;
+
+    }
+
+    .overlay p{
+
+        font-size:18px;
+
+    }
+
 }
